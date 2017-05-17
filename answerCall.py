@@ -5,10 +5,11 @@
 # or visit (https://github.com/HundredVisionsGuy/answerCall)
 
 # Write function definition: answerCall()
+
 def answerCall(caller_code, sameAreaCode, cur_time):
     cur_time = list(cur_time)
-    if ((int(cur_time[0]) == 2 and int(cur_time[1]) > 2) == True or
-        (int(cur_time[0]) == 0 and int(cur_time[1]) < 7) == True):
+    if (int(cur_time[0]) == 2 and int(cur_time[1]) > 2 == True or
+        int(cur_time[0]) == 0 and int(cur_time[1]) < 7 == True):
         return False
     else:
         if caller_code in('F', 'R'):
@@ -17,10 +18,6 @@ def answerCall(caller_code, sameAreaCode, cur_time):
             return True
         else:
             return False
-    
-
-
-
 
 # Make sure it returns a value
 
