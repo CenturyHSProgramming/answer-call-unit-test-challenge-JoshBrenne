@@ -11,7 +11,7 @@ def answerCall(caller_code, sameAreaCode, cur_time):
     if ((int(cur_time[0]) == 2 and int(cur_time[1]) > 2) == True or
         (int(cur_time[0]) == 0 and int(cur_time[1]) < 7) == True):
         return False
-    if caller_code in('F', 'R'):
+    elif caller_code in('F', 'R'):
         return True
     elif caller_code in('U') and sameAreaCode == True:
         return True
