@@ -1,10 +1,35 @@
 # answerCall.py
-# by _______
+# by Josh Brenne
 
 # For instructions on what to do, see README.md
 # or visit (https://github.com/HundredVisionsGuy/answerCall)
 
-# Write function defintion: answerCall()
+# Write function definition: answerCall()
+def answerCall(caller_code, sameAreaCode, cur_time):
+    cur_time = list(cur_time)
+    if caller_code in('F', 'R'):
+        if (int(cur_time[0]) == 2 and int(cur_time[1]) > 2) == True:
+            return False
+        elif (int(cur_time[0]) == 0 and int(cur_time[1]) < 7) == True:
+            return False
+        else:
+            return True
+    elif caller_code in('U'):
+        if sameAreaCode == True:
+                if (int(cur_time[0]) == 2 and int(cur_time[1]) > 2) == True:
+                    return False
+                elif (int(cur_time[0]) == 0 and int(cur_time[1]) < 7) == True:
+                    return False
+                else:
+                    return True
+        else:
+            return False
+    elif caller_code in('T'):
+        return False
+    
+
+
+
 
 # Make sure it returns a value
 
